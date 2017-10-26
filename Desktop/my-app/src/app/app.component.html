@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-italic" style="font-size:20px;"></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">People</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <form [ngFormModel]="loginForm" (ngSubmit)="doLogin($event)" #f="ngForm">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h3 align="center">We would love to
+                    <br> hear from you</h3>
+                </div>
+                <div id='demo' class="clearfix hidden">
+                  <p>Thanks you,We have receive your message.</p>
+                </div>
+                <div class="loginDiv">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input  [ngFormControl]="myForm.Control['FirstName']" type="text" id="firstname" placeholder="Enter the name" class="form-control" title="we need your first name"  #FirstName="ngForm">
+                    <span class="validation.error" *ngIf="!firstname">We Need Your FirstName</span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input  [ngFormControl]="myForm.Control['LastName']" type="text" id="lastname" placeholder="Enter the last name" class="form-control" title="we need your last name"  #LastName="ngForm">
+                    <span class="validation.error" *ngIf="!lastname">We Need Your LastName</span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input   [ngFormControl]="myForm.Control['Email']" type="text" id="email" placeholder="Enter the email address" class="form-control" title="please use a valid email address"  #Email="ngForm">
+                    <span class="validation.error" *ngIf="!email">please use a valid e-mail address</span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input   [ngFormControl]="myForm.Control['PhoneNumber']" type="number" id="phonenumber" placeholder="Enter the phone number" class="form-control" title="we need your phone number" #PhoneNumber="ngForm">
+                    <span class="validation.error" *ngIf="!phonenumber">We Need Your FirstName</span>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input  [ngFormControl]="myForm.Control['Message']" type="text" id="message" placeholder="Enter your message" class="form-control" style="height: 75px" title="sorry the message can't be empty"  #Message="ngForm">
+                    <span class="validation.error" *ngIf="!message">Sorry! Your message can't be empty</span>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"></div>
+              </div>
+            </div>
+            </div>
+    </form>
+    <div>
+    <div class="col-sm-3"></div>
+    <div class="col-md-6 col-xs-3 col1 center-block">
+      <a href="#">
+        <button type="submit" value="Send" onclick="myFunction()" class="btn btn-danger center-block btn-lg round">Send</button>
+      </a>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="col-sm-12">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <div class="image-center" style="text-align: center;">
+          <i class="fa fa-facebook" style="font-size:24px;color:white;margin-right:12px"></i>
+          <i class="fa fa-twitter" style="font-size:24px;color:white;margin:12px"></i>
+          <i class="fa fa-instagram" style="font-size:24px;color:white;margin-left: 12px"></i>
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
