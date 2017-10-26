@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class handle_search implements ActionListener
+{
+	notepad np;
+	public handle_search (notepad np)
+	{
+		this.np=np;
+	}
+	
+	public void actionPerformed(ActionEvent ae)
+	{
+		if(ae.getSource()==np.find) 
+		   search_dialog ss =new search_dialog(np,this,"Find");
+		
+             
+               if(ae.getSource()==np.repalce)
+                  search_dialog ss =new search_dialog(np,this,"Replace");
+			
+	}
+}
